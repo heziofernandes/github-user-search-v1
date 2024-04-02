@@ -1,11 +1,17 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 
 import { Spinner } from '.';
 
 describe('Spinner', () => {
   it('renders correctly', () => {
-    const { container } = render(<Spinner />);
+    const { getByTestId } = render(<Spinner />);
+    expect(screen.getByTestId('spinner-container')).toBeInTheDocument();
+    expect(getByTestId).toMatchSnapshot();
+  });
 
-    expect(container).toMatchSnapshot();
+  it('should contain the correct spinner elements', () => {
+    const { getAllByTestId } = render(<Spinner />);
+    const spinnerElements = screen.getAllByTestId('spinner-element');
+    expect(spinnerElements).toHaveLength(4);
   });
 });

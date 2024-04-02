@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User Component should be rendered flawlessly 1`] = `
+<div>
+  <div>
+    <h1>
+      Look who we found 🔥
+    </h1>
+    <div>
+      <img
+        alt=""
+        src="https://avatars.githubusercontent.com/u/fernandes?v=4"
+      />
+      <div>
+        <p>
+          <b>
+            Name:
+          </b>
+           
+          <span
+            data-testid="username"
+          >
+            Thiago H S Ramos
+          </span>
+        </p>
+        <p>
+          <b>
+            Repositories:
+          </b>
+           
+          25
+        </p>
+        <button
+          class=""
+          type="button"
+        >
+          Return
+        </button>
+      </div>
+    </div>
+    <div>
+      <h1>
+        Repositories
+      </h1>
+      <ul>
+        <li>
+          <strong
+            data-testid="reponame-215256985"
+          >
+            fernandes/dasa-code-challenge
+          </strong>
+          <p>
+            Dasa Code Challenge frontend
+          </p>
+        </li>
+        <li>
+          <strong
+            data-testid="reponame-213955809"
+          >
+            fernandes/graphql-blog-api
+          </strong>
+          <p />
+        </li>
+        <li>
+          <strong
+            data-testid="reponame-294670010"
+          >
+            fernandes/graphql-blog-study
+          </strong>
+          <p>
+            Course from udemy
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`User Component should be rendered username succefully 1`] = `[Function]`;

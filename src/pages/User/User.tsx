@@ -14,6 +14,7 @@ interface UserData {
 interface Repository {
   full_name: string;
   description: string;
+  id: number;
 }
 
 export const User = () => {
@@ -54,7 +55,7 @@ export const User = () => {
             <img className={styles.avatar} src={user?.avatar_url} alt="" />
             <div className={styles.userInfo}>
               <p>
-                <b>Name:</b> {user?.name}
+              <b>Name:</b> <span data-testid="username">{user?.name}</span>
               </p>
               <p>
                 <b>Repositories:</b> {user?.public_repos}
@@ -71,7 +72,7 @@ export const User = () => {
             <ul className={styles.repoList}>
               {repos?.map((repo) => (
                 <li className={styles.repoItem} key={repo.full_name}>
-                  <strong>{repo.full_name}</strong>
+                  <strong data-testid={`reponame-${repo.id}`}>{repo.full_name}</strong>
                   <p>{repo.description}</p>
                 </li>
               ))}

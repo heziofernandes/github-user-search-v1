@@ -8,8 +8,12 @@ interface InputProps extends HTMLProps<HTMLInputElement> {
 
 export const Input = ({ customStyle = '', ...rest }: InputProps) => {
   return (
-    <div className={styles.container}>
-      <input className={cx(styles.input, customStyle)} {...rest} />
+    <div className={styles.container} data-testid="input-container">
+      <input
+        className={cx(styles.input, customStyle)}
+        {...rest}
+        data-testid="input-element"
+      />
     </div>
   );
 };
