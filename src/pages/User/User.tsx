@@ -36,7 +36,9 @@ export const User = () => {
   if (userError || reposError) {
     return (
       <div className={styles.errorContainer}>
-        <h2 className={styles.errorMessage}>Ops, something went wrong 😢</h2>
+        <h2 className={styles.errorMessage} data-testid="user-not-found">
+          Ops, something went wrong 😢
+        </h2>
         <Button customStyle={styles.button} title="Return" onClick={navigateToHome} />
       </div>
     );
@@ -50,12 +52,14 @@ export const User = () => {
         </div>
       ) : (
         <div className={styles.container}>
-          <h1 className={styles.title}>Look who we found 🔥</h1>
+          <h1 className={styles.title} data-testid="main-title">
+            Look who we found 🔥
+          </h1>
           <div className={styles.userContainer}>
             <img className={styles.avatar} src={user?.avatar_url} alt="" />
             <div className={styles.userInfo}>
               <p>
-              <b>Name:</b> <span data-testid="username">{user?.name}</span>
+                <b>Name:</b> <span data-testid="username">{user?.name}</span>
               </p>
               <p>
                 <b>Repositories:</b> {user?.public_repos}

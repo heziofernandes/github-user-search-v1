@@ -3,7 +3,9 @@
 exports[`User Component should be rendered flawlessly 1`] = `
 <div>
   <div>
-    <h1>
+    <h1
+      data-testid="main-title"
+    >
       Look who we found 🔥
     </h1>
     <div>

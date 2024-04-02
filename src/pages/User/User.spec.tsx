@@ -14,11 +14,11 @@ jest.mock('react-router-dom', () => ({
 }));
 
 const returnMock = (key: string) => {
-  const Obj: any = {
+  const mockByUrl: any = {
     'users/testUser': { data: mockUser },
     'users/testUser/repos': { data: mockRepo },
   };
-  return Obj[key];
+  return mockByUrl[key];
 };
 
 jest.mock('../../hooks/useFetch', () => ({
