@@ -8,7 +8,9 @@ describe('Perform search', () => {
     cy.visit('/');
     cy.fixture('repositoriesHezio.json').as('reporitories');
     cy.intercept('GET', 'https://api.github.com/users/*').as('getUsers');
-    cy.intercept('GET', 'https://api.github.com/users/agatafernandes', { fixture: 'mockUser.json' })
+    cy.intercept('GET', 'https://api.github.com/users/agatafernandes', {
+      fixture: 'mockUser.json',
+    });
   });
 
   it('Perform user search with multiple repositories', () => {
@@ -47,7 +49,7 @@ describe('Perform search', () => {
   //TODO: An error message should appear, so that the script/route becomes invalid (404)
   it('Cross -Site Scripting(XSS)', () => {
     const searchTerm = "<script>alert('XSS')</script>";
-    searchPage.searchUser(searchTerm)
-   console.log("Should be redirect to 404")
+    searchPage.searchUser(searchTerm);
+    console.log('Should be redirect to 404');
   });
 });

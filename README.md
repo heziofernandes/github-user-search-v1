@@ -23,6 +23,27 @@ Clone or download the repo
 
 - `git commit` since this repo uses husky and cli commitlint, a frindly cli will appear to help you commit a clear message
 
+## How to run the tests
+
+Unit and integration testing (Jest and RTL)
+
+After installing the dependencies (`yarn install`)
+- `yarn test` to run all unit and integration tests
+
+
+Test E2E with Cypress
+- `yarn dev` to run the project in development mode
+- `yarn cy:test` to run tests in CLI mode
+- `yarn cy:open` to run tests in Launchpad mode
+  - Choose a testing type
+  - Launch a browser
+
+## Test Report
+
+- In CLI mode, run: `yarn cy:run` a new report will be generated after running the tests.
+- Access the file at: cypress/reports/html/index.html
+- Open this file in the browser
+
 ## Disclaimer
 
 The github api is public and it has a limit of 60 request for a unauthenticated user
