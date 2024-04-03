@@ -33,10 +33,11 @@ After installing the dependencies (`yarn install`)
 
 Test E2E with Cypress
 - `yarn dev` to run the project in development mode
-- `yarn cy:test` to run tests in CLI mode
 - `yarn cy:open` to run tests in Launchpad mode
   - Choose a testing type
   - Launch a browser
+- `yarn cy:test` to run tests in CLI mode
+
 
 ## Test Report
 

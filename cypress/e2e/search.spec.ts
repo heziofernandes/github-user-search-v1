@@ -41,13 +41,13 @@ describe('Perform search', () => {
     });
   });
 
-  it('Perform user mock', () => {
+  it('Perform user found', () => {
     searchPage.searchUser('agatafernandes');
     repositoriesPage.returnRepositories('agatafernandes/branas-JS');
   });
 
   //TODO: An error message should appear, so that the script/route becomes invalid (404)
-  it('Cross -Site Scripting(XSS)', () => {
+  it('Cross-Site-Scripting (XSS)', () => {
     const searchTerm = "<script>alert('XSS')</script>";
     searchPage.searchUser(searchTerm);
     console.log('Should be redirect to 404');
