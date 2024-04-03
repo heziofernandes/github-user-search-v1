@@ -30,7 +30,11 @@ exports[`User Component should be rendered flawlessly 1`] = `
             Repositories:
           </b>
            
-          25
+          <span
+            data-testid="repo-count"
+          >
+            25
+          </span>
         </p>
         <button
           class=""
