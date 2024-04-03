@@ -17,7 +17,7 @@ export const Home = () => {
   const navigateToUserPage = () => navigate(`/user/${username}`);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="home-container">
       <h1 className={styles.title}>Search for a user</h1>
       <div className={styles.content}>
         <Input
@@ -28,12 +28,14 @@ export const Home = () => {
           value={username}
           autoCapitalize="none"
           onChange={handleUsernameChange}
+          data-testid="username-input"
         />
         <Button
           customStyle={styles.button}
           title="search"
           isDisabled={username.length <= 3}
           onClick={navigateToUserPage}
+          data-testid="search-button"
         />
       </div>
     </div>

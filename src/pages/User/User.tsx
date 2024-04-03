@@ -14,6 +14,7 @@ interface UserData {
 interface Repository {
   full_name: string;
   description: string;
+  id: number;
 }
 
 export const User = () => {
@@ -35,7 +36,9 @@ export const User = () => {
   if (userError || reposError) {
     return (
       <div className={styles.errorContainer}>
-        <h2 className={styles.errorMessage}>Ops, something went wrong 😢</h2>
+        <h2 className={styles.errorMessage} data-testid="user-not-found">
+          Ops, something went wrong 😢
+        </h2>
         <Button customStyle={styles.button} title="Return" onClick={navigateToHome} />
       </div>
     );
@@ -49,12 +52,14 @@ export const User = () => {
         </div>
       ) : (
         <div className={styles.container}>
-          <h1 className={styles.title}>Look who we found 🔥</h1>
+          <h1 className={styles.title} data-testid="main-title">
+            Look who we found 🔥
+          </h1>
           <div className={styles.userContainer}>
             <img className={styles.avatar} src={user?.avatar_url} alt="" />
             <div className={styles.userInfo}>
               <p>
-                <b>Name:</b> {user?.name}
+                <b>Name:</b> <span data-testid="username">{user?.name}</span>
               </p>
               <p>
                 <b>Repositories:</b> {user?.public_repos}
@@ -71,7 +76,7 @@ export const User = () => {
             <ul className={styles.repoList}>
               {repos?.map((repo) => (
                 <li className={styles.repoItem} key={repo.full_name}>
-                  <strong>{repo.full_name}</strong>
+                  <strong data-testid={`reponame-${repo.id}`}>{repo.full_name}</strong>
                   <p>{repo.description}</p>
                 </li>
               ))}
