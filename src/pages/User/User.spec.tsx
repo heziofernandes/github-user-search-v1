@@ -33,7 +33,7 @@ describe('User Component', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should be rendered username succefully', () => {
+  it('should be rendered username successfully', () => {
     const { getByTestId } = render(<User />);
     const usernameElement = screen.getByTestId('username');
     expect(usernameElement).toBeInTheDocument();
@@ -41,7 +41,7 @@ describe('User Component', () => {
     expect(usernameElement.innerHTML).toEqual(mockUser.name);
   });
 
-  it('should be rendered repository name succefully', () => {
+  it('should be rendered repository name successfully', () => {
     render(<User />);
     mockRepo.forEach((item, index) => {
       const repoNameElement = screen.getByTestId(`reponame-${item.id}`);

@@ -5,8 +5,8 @@ export class RepositoriesPage {
     cy.get('[data-testid="main-title"]')
       .should('be.visible')
       .invoke('text')
-      .then((messageNotFound) => {
-        expect(messageNotFound).to.equal('Look who we found 🔥');
+      .then((mainTitle) => {
+        expect(mainTitle).to.equal('Look who we found 🔥');
       });
     cy.get('[data-testid^="reponame-"]')
       .invoke('text')
@@ -47,8 +47,8 @@ export class RepositoriesPage {
     cy.get('[data-testid="main-title"]')
       .should('be.visible')
       .invoke('text')
-      .then((messageNotFound) => {
-        expect(messageNotFound).to.equal('Look who we found 🔥');
+      .then((message) => {
+        expect(message).to.equal('Look who we found 🔥');
       });
     cy.get('[data-testid="repo-count"]')
       .invoke('text')

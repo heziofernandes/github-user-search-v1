@@ -83,4 +83,6 @@ exports[`User Component should be rendered flawlessly 1`] = `
 </div>
 `;
 
-exports[`User Component should be rendered username succefully 1`] = `[Function]`;
+exports[`User Component should be rendered username successfully 1`] = `[Function]`;
+
+exports[`User Component should be rendered username successfully 1`] = `[Function]`;
