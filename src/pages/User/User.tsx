@@ -62,7 +62,8 @@ export const User = () => {
                 <b>Name:</b> <span data-testid="username">{user?.name}</span>
               </p>
               <p>
-                <b>Repositories:</b> {user?.public_repos}
+                <b>Repositories:</b>{' '}
+                <span data-testid="repo-count">{user?.public_repos}</span>
               </p>
               <Button
                 customStyle={styles.button}

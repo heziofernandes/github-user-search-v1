@@ -1,0 +1,10 @@
+{
+  "repositories": [
+    "heziofernandes/api-node",
+    "heziofernandes/automation-test-form",
+    "heziofernandes/component-testing-react",
+    "heziofernandes/component-testing-react-native",
+    "heziofernandes/gostack-api-nodejs",
+    "heziofernandes/nextjs-project"
+  ]
+}
