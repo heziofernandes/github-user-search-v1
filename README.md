@@ -7,6 +7,9 @@
 ## Introduction
 
 This is a basic project that search for a user on github and then returns a few of the user data and it's repositories's names and descriptions.
+## Table of Contents:
+  ### [Running the Tests](#how-to-run-the-tests)
+  ### [Test Report](#report)
 
 ## Demo
 
@@ -24,6 +27,7 @@ Clone or download the repo
 - `git commit` since this repo uses husky and cli commitlint, a frindly cli will appear to help you commit a clear message
 
 ## How to run the tests
+
 
 Unit and integration testing (Jest and RTL)
 
