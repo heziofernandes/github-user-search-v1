@@ -14,7 +14,7 @@ This is a basic project that search for a user on github and then returns a few 
 
 ## Demo
 
-https://user-images.githubusercontent.com/56850413/165952437-1cba04ef-4b68-4f3c-86aa-c69f70086a2d.mp4
+![github-search-demo](https://github.com/heziofernandes/github-user-search-v1/assets/5331976/86db254d-ac9d-4100-9cba-0ccda470fa9b)
 
 ## How to get up and running
 
@@ -28,9 +28,6 @@ Clone or download the repo
 - `git commit` since this repo uses husky and cli commitlint, a frindly cli will appear to help you commit a clear message
 
 ## How to run the tests
-![github-search-demo](https://github.com/heziofernandes/github-user-search-v1/assets/5331976/86db254d-ac9d-4100-9cba-0ccda470fa9b)
-
-
 
 ## Unit and integration testing (Jest and RTL)
 
